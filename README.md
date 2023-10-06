@@ -117,12 +117,12 @@ function canObjectParry(projectilePosition, objectPosition, projectileVelocity, 
 		(distanceToIntercept >= 75 and distanceToIntercept <= 100 and timeToIntercept <= 1.0);
 		(distanceToIntercept >= 75 and distanceToIntercept <= 100 and timeToIntercept <= 1.5);
 		(distanceToIntercept >= 75 and distanceToIntercept <= 100 and timeToIntercept <= 0.4);
-		(distanceToIntercept <= 3)
+
 	}
 	
 	local r
 	if distanceToIntercept <= 0.20 then
-        wait(lowDistanceResponseDelay)  -- ดีเลย์เมื่อ distanceToIntercept <= 0.20
+        delay(lowDistanceResponseDelay)  -- ดีเลย์เมื่อ distanceToIntercept <= 0.20
         r = false
     else
 	   for i, v in pairs(conditions) do
